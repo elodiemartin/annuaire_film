@@ -1,0 +1,94 @@
+// @import url('https://fonts.googleapis.com/css?family=Nixie+One');
+// @import url('https://fonts.googleapis.com/css?family=Rammetto+One');
+
+$primary-color: #000000;
+$secondary-color: #FFFFFF;
+$red-color: #8B0A15;
+$primary-font: 'Titan One', cursive;
+$secondary-font: 'Nixie One', cursive;
+
+footer {
+    background: $primary-color;
+    font-family: $secondary-font;
+    .logo {
+        font-family: $primary-font;
+        font-size: 1.5rem;
+        span {
+            color: $red-color;
+        }
+        a {
+            text-decoration: none !important;
+        }
+    }
+    .navbar {
+        font-size: 0.9rem;
+        span {
+            @media (max-width: 991px) { 
+                display: none;
+            }
+        }
+        a {
+            text-decoration: none;
+            &:hover {
+                color: $red-color !important;
+                font-weight: bold;
+            }
+        }
+    }
+    .circle-facebook {
+        border: solid 1px $secondary-color;
+        border-radius: 50px;
+        height: 30px;
+        padding: 10px;
+        padding-left: 11px;
+        padding-right: 2px;
+        width: 32px;
+        &:hover {
+            background: $red-color;
+            color: $secondary-color;
+            border: solid 1px $red-color;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    .circle-twitter {
+        border: solid 1px $secondary-color;
+        border-radius: 50px;
+        height: 30px;
+        padding: 10px;
+        padding-left: 8px;
+        padding-right: 5px;
+        width: 32px;
+        &:hover {
+            background: $red-color;
+            color: $secondary-color;
+            border: solid 1px $red-color;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    .circle-instagram {
+        border: solid 1px $secondary-color;
+        border-radius: 50px;
+        height: 30px;
+        padding: 10px;
+        padding-left: 8px;
+        padding-right: 7px;
+        width: 32px;
+        &:hover {
+            background: $red-color;
+            color: $secondary-color;
+            border: solid 1px $red-color;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    .fab {
+        display: block;
+        margin-top: -4px;
+    }
+
+}

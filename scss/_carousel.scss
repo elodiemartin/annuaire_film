@@ -1,0 +1,163 @@
+/* CAROUSEL OWL 1 */
+.owl-one {
+
+	width: 100%;
+	background-color: #1b1b1b;
+	/* @media (min-width: 1200px) { padding: 100px 0px; } */
+	.owl-nav, .owl-dots {
+		display: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.item-carousel-one {
+		min-height: 550px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		@media (min-width: 576px) {
+		 background-position: bottom;	
+		 background-size: cover; 
+		  min-height: 800px; 
+		}
+
+		@media (min-width: 768px) {
+			background-size: 100%;
+		 	// height: 500px;
+		}
+
+		@media (min-width: 1200px) { 
+			background-size: cover;
+			height: 750px;
+			box-shadow: 5px 3px 10px 0px rgba(0,0,0,0.75);
+			/* justify-content: flex-start !important; */
+		}
+
+		p {
+			display: inline-block;
+			font-family: 'Nixie One', cursive;
+			background-color: rgba(150,0,0,0.90);
+			color: white;
+			font-size: 25px;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 0;
+			font-weight: bold;
+			@media (min-width: 576px) { font-size: 40px; }
+			@media (min-width: 768px) { font-size: 30px;}
+			@media (min-width: 992px) { 
+				min-height: 80px !important;
+				line-height: 80px;
+				background-color: rgba(150,0,0,0.90);
+				font-size: 30px;
+		
+			}
+			@media (min-width: 1200px) { 
+				font-size: 20px;
+				line-height: 60px;
+				min-height: 60px !important;
+			} 
+			
+		}
+
+	}
+
+}
+
+
+/* CAROUSEL OWL 2 */
+.owl-two {
+	background-color: #1b1b1b; 
+	height: 200px;
+	@media (min-width: 576px) { height: 300px; }
+	@media (min-width: 993px) { height: 312px; }
+
+	@media (min-width: 1200px) { height: 500px; }
+	
+	.owl-nav {
+		color: white;
+		font-size: 30px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		top: 80px;
+		padding: 10px;
+	} 
+
+	.owl-prev {
+		position: absolute;
+		z-index: 99;
+		top: 100px;
+		left: 10;
+
+	}
+
+	.owl-next {
+		position: absolute;
+		z-index: 99;
+		top: 100px;
+		right: 10px;
+	}
+	
+	
+	.owl-stage-outer {
+		
+	}
+
+	.item-carousel-two {
+
+		height: 200px;
+		@media (min-width: 576px) { height: 300px; }
+		@media (min-width: 1200px) { height: 500px; }
+
+		p {
+			
+			color: white;
+			font-family: 'Nixie One', cursive;
+			font-weight: lighter;
+			margin: 0;
+			font-size: 14px;
+			text-align: center;
+
+			
+			@media (min-width: 576px) { font-size: 20px; }
+			@media (min-width: 1200px) { font-size: 30px; }
+
+		}
+
+		/* i {
+			font-size: 15px;
+			padding-bottom: 10px;
+			color: rgba(150,0,0,0.2);
+		}
+		 */
+		p::before {
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			content: "\f10d";
+			font-size: 20px;
+			padding: 10px;
+			color: rgba(150,0,0,0.2);
+			@media (min-width: 576px ) { font-size: 30px;}
+			@media (min-width: 768px ) { font-size: 35px; }
+	
+			@media (min-width: 1200px ) { font-size: 45px; }
+		} 
+		
+		em {
+			font-family: 'Nixie One', cursive;
+			font-weight: 1000;
+			font-size: 13px;
+			color: white;
+			letter-spacing: 1px;
+			@media (min-width: 1200px) { font-size: 15px; }
+
+		}
+	}
+
+}

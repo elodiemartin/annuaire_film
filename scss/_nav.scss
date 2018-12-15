@@ -1,0 +1,189 @@
+header {
+
+    font-family: "Nixie One", cursive;
+    background-color: #000000;
+    
+    nav {
+            margin: auto;
+            width: 95%;
+        
+
+        .fas {
+            color: #8b0a15 !important;
+            font-size: 30px;
+
+        }
+        .fas:hover {cursor: pointer}
+        h1 {
+            transition: transform 0.5s;
+            &:hover {
+                    color: #8b0a15;
+                    transform: scale(1.1);
+            }
+            a {
+                transition: color 0.2s;
+                font-family: 'Titan One', cursive;
+                font-size: 28px;
+                color: #ffffff;
+                &:focus {
+                    text-decoration: none;
+                    color: #8b0a15 ;
+                }
+                &:active {
+                    color: #8b0a15 ;
+                }
+                &:link {
+                    color: #8b0a15 ;
+                }
+                &:hover {
+                    color: #8b0a15;
+                    text-decoration: none;
+                }
+                span {
+                    color: #8b0a15;
+                }
+            }
+        }
+        #genre:hover {cursor: pointer}
+        #director:hover {cursor: pointer}
+        #date:hover {cursor: pointer}
+        }
+        #collapseOneLg {
+            background-color: #1b1b1b;
+
+            a {
+                color: #ffffff;
+            }
+
+        }
+        #collapseTwoLg {
+            background-color: #1b1b1b;
+
+            a {
+                color: #ffffff;
+            }
+
+        }
+        #collapseThreeLg {
+            background-color: #1b1b1b;
+
+            a {
+                color: #ffffff;
+            }
+    }
+
+    .accordion {
+
+        #headingOne {
+            background-color: #111111;
+
+            h5 {
+                button {
+                    color: #ffffff;
+                    font-weight: bold;
+                    &:focus {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
+
+        #collapseOne {
+            background-color: #1b1b1b;
+
+            a {
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 15px;
+
+            }
+
+        }
+
+        #headingTwo {
+            background-color: #111111;
+
+            h5 {
+                button {
+                    color: #ffffff;
+                    font-weight: bold;
+                    &:focus {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
+
+        #collapseTwo {
+            background-color: #1b1b1b;
+
+            a {
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+        }
+
+        #headingThree {
+            background-color: #111111;
+
+            h5 {
+                button {
+                    color: #ffffff;
+                    font-weight: bold;
+                    &:focus {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
+
+        #collapseThree {
+            background-color: #1b1b1b;
+
+            a {
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+        }
+    }
+    
+}
+
+@media (max-width: 575px) {}
+
+@media (min-width: 576px) and (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) {}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    a {
+        text-align: center;
+
+    }
+}
+
+#genre, #director, #date {
+    font-weight: bold;
+   
+}
+
+#collapseOneLg, #collapseTwoLg, #collapseThreeLg {
+   font-weight: bold; 
+}

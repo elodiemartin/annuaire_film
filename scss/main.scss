@@ -1,0 +1,38 @@
+
+@import '_nav.scss';
+@import '_carousel.scss';
+@import '_list-img.scss';
+@import '_footer.scss';
+@import '_moovie.scss';
+@import '_welcom.scss';
+
+
+
+#autoComplete:hover {
+	width: 20rem;
+}
+
+.container-fluid {
+	padding: 0px;
+}
+
+// body {
+// 	margin: 40px 0px 0px 0px;
+// }
+
+button:focus {outline:0;}
+
+#up_btn {
+	background: rgba(255, 255, 255,0.8);
+	color: #8B0A15;
+	position: fixed;
+	bottom: 20px;
+	border: none;
+	right: 20px;
+
+    z-index: 9999;
+	&:focus {
+		box-shadow: none;
+	}
+}
+

@@ -1,0 +1,80 @@
+.container-main {
+    background: #111111;
+}
+
+.container-list {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @media (min-width: 991px) and (max-width: 1200px) {
+        margin-top: 22%;
+        margin-bottom: 22%;
+    }
+    @media (max-width: 991px) {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.mycard-list {
+    background-size: cover;
+    height: 510px;
+    box-shadow: 7px 7px 31px -6px rgba(0,0,0,0.75);
+    @media (max-width: 1199px) { 
+        height: 430px;
+    }
+    @media (max-width: 991px) { 
+        height: 980px;
+    }
+    @media (max-width: 767px) { 
+        height: 730px;
+    }
+    @media (max-width: 510px) { 
+        height: 680px;
+    }
+    @media (max-width: 450px) { 
+        height: 600px;
+    }
+    @media (max-width: 410px) { 
+        height: 550px;
+    }
+    @media (max-width: 368px) { 
+        height: 500px;
+    }
+    @media (max-width: 320px) { 
+        height: 450px;
+    }
+    @media (max-width: 300px) { 
+        height: 430px;
+    }
+    p {
+        display: inline-block;
+        font-family: 'Nixie One', cursive;
+        font-weight: bold;
+        background-color: rgba(200,0,0,0.9);
+        color: white;
+        font-size: 22px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+        a {
+            color: #FFFFFF;
+        }
+        @media (min-width: 576px) { font-size: 40px; }
+        @media (min-width: 768px) { font-size: 30px;}
+        @media (min-width: 992px) { 
+            min-height: 80px !important;
+            line-height: 80px;
+            background-color: rgba(150,0,0,0.7);
+            font-size: 20px;
+    
+        }
+        @media (min-width: 1200px) { 
+            font-size: 20px;
+            line-height: 60px;
+            min-height: 60px !important;
+        } 
+        
+    }
+
+}
+

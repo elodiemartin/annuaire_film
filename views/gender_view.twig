@@ -1,0 +1,138 @@
+{% extends "home_view.twig" %}
+
+{% block gender %}
+
+
+    <!-- // TOUT LES FILMS PAR LEURS GENRE -->
+    <div class="container container-list">
+        <div class="row">
+            {% for elem in film %}
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-1">
+                    <div class="mycard mycard-list d-flex flex-column justify-content-end align-items-center" data-url="/annuaire_film/film/show/{{ elem.mId }}" data-id="{{ elem.mId }}">
+                        <p> 
+                            {% set foo = elem.genresId|split(',') %}
+                            {% set foo2 = elem.genres|split(',') %}
+                            {% for id in foo %}		
+                                <a href="/annuaire_film/gender/list/{{ id }}">{{ foo2[loop.index0] }}</a>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block nav %}
+            <nav class="d-flex align-items-center">
+            <i id="burger" class="col-2 d-block d-sm-block d-md-none d-lg-none d-xl-none  fas fa-bars p-0"></i>
+            <h1 class="col-8 col-sm-8 col-md-4 col-lg-2 col-xl-2 my-2 d-flex justify-content-center"><a href="/annuaire_film">M<span>O</span>OVIZ</a></h1>
+            <div id="nav2" class="col-md-8 col-lg-8 col-xl-8 d-none d-sm-none d-md-block d-lg-block d-xl-block text-white">
+                <div class="d-flex justify-content-center">
+                    <p id="genre" class="p-2 m-0">Genre</p>
+                    <p id="director" class="p-2 m-0">Réalisateur</p>
+                    <p id="date" class="p-2 m-0">Date de sortie</p>
+                </div>
+            </div>
+          
+        </nav>
+
+        <div id="collapseOneLg" class="collapse d-none" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                {% for gender in genders %}
+                <a class="col-3" href="/annuaire_film/gender/list/{{ gender.id }}"> {{ gender.name }} </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="collapseTwoLg" class="collapse d-none" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                {% for owner in owners %}
+                <a class="col-6" href="/annuaire_film/owners/list/{{ owner.id }}"> {{ owner.name }}&nbsp;{{
+                    owner.lastname}}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="collapseThreeLg" class="collapse d-none" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                {% for date in years %}
+                <a class="col-3" href="/annuaire_film/years/list/{{ date.releaseDate }}"> {{ date.releaseDate
+                    }} </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="accordion col-12 p-0  d-none" id="accordion">
+
+            <!-- Premier dropdown item -->
+
+            <div class="p-0 border-left-0 border-right-0">
+                <div class="card-header border-0" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Genre
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        {% for gender in genders %}
+                        <a href="/annuaire_film/gender/list/{{ gender.id }}"> {{ gender.name }} </a><br>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second dropdown item -->
+
+            <div class=" p-0 border-left-0 border-right-0">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Réalisateur
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body ">
+                        {% for owner in owners %}
+                        <a href="/annuaire_film/owners/list/{{ owner.id }}"> {{ owner.name }}&nbsp;{{
+                            owner.lastname}}
+                        </a><br>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Troisième dropdown item -->
+
+            <div class=" p-0 border-left-0 border-right-0">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Date de sortie
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        {% for date in years %}
+                        <a href="/annuaire_film/years/list/{{ date.releaseDate }}"> {{ date.releaseDate
+                            }} </a><br>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+{% endblock %}
