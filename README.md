@@ -4,7 +4,7 @@ Movie directory with SCSS, Boostrap, Javascript, PHP, Twig, MySql
 
 ## Demo
 
-Do you want to see the website? Visit http://elodie-martin.com/annuaire_film
+Do you want to see the website? Visit https://mooviz.elodie-martin.com/
 
 ## Installation
 
